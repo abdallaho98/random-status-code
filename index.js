@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.get('/', function (req, res) {
     let smallRandom = Math.random();
     // I want 200 to have a slightly higher chance of happening
-    if( smallRandom > 0.5 ){        
+    if( smallRandom > 0.8 ){        
         let randomStatusCode = generateRandomBadStatusCode(smallRandom);
         res.status(randomStatusCode).send('The response status code was: '+ randomStatusCode + ' and the secret message is: ' + msg);
     }else{
